@@ -13,6 +13,23 @@ app.use(express.static(path.join(__dirname, 'public')))
 app.set('view engine', 'ejs')
 app.set('views', path.join(__dirname, 'views'))
 
+const { auth } = require('express-openid-connect');
+
+app.use(auth({
+  authRequired: false,
+  auth0Logout: true,
+  secret: process.env.SECRET,
+  baseURL: process.env.BASE_URL,
+  clientID: process.env.CLIENT_ID,
+  issuerBaseURL: process.env.ISSUER_BASE_URL
+}));
+
+app.use((req, res, next) => {
+    res.locals.user = req.oidc.user;
+    next();
+});
+
+
 var indexRouter = require("./routes/index.js")
 app.use("/", indexRouter)
 
