@@ -15,6 +15,7 @@
             data-intensity='<%- JSON.stringify(intensity) %>' 
             data-mood='<%- JSON.stringify(mood) %>' 
             data-reason='<%- JSON.stringify(reason) %>'
+            data-timeline='<%- JSON.stringify(timeline) %>'
             data-total="<%= total %>">
         </div>
 
@@ -37,6 +38,11 @@
                 <div class="chart-card">
                     <h2>Reason</h2>
                     <canvas id="reasonChart"></canvas>
+                </div>
+
+                <div class="chart-card">
+                    <h2>Timeline</h2>
+                    <canvas id="timelineChart"></canvas>
                 </div>
 
             </div>
@@ -109,6 +115,41 @@
                 }
             }
         });
+
+
+        const timelineData = JSON.parse(chartDiv.dataset.timeline);
+
+        const timelineCtx = document.getElementById('timelineChart').getContext('2d');
+
+        new Chart(timelineCtx, {
+            type: 'line',
+            data: {
+                labels: timelineData.map(t => t.cry_date),
+                datasets: [{
+                    label: 'Number of cries per day',
+                    data: timelineData.map(t => t.count),
+                    fill: true,
+                    tension: 0.4,
+                    borderColor: '#7086B4',
+                    backgroundColor: 'rgba(112, 134, 180, 0.2)'
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: { display: false }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            stepSize: 1
+                        }
+                    }
+                }
+            }
+        });
+
     </script>
 
 </body>

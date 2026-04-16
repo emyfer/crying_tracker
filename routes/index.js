@@ -96,12 +96,22 @@ router.get("/stats", requiresAuth(), async (req, res) => {
         const intensityRes = await pool.query("SELECT intensity, COUNT(*) FROM cries WHERE user_id = $1 GROUP BY intensity", [dbUser.id]);
         const moodRes = await pool.query("SELECT mood, COUNT(*) FROM cries WHERE user_id = $1 GROUP BY mood", [dbUser.id]);
         const reasonRes = await pool.query("SELECT reason, COUNT(*) FROM cries WHERE user_id = $1 GROUP BY reason", [dbUser.id]);
+        const timelineRes = await pool.query(
+            `SELECT cry_date, COUNT(*) AS count
+            FROM cries
+            WHERE user_id = $1
+            GROUP BY cry_date
+            ORDER BY cry_date ASC`,
+            [dbUser.id]
+    );
+
 
         res.render('stats', {
             total: totalRes.rows[0].count,
             intensity: intensityRes.rows,
             mood: moodRes.rows,
-            reason: reasonRes.rows
+            reason: reasonRes.rows,
+            timeline: timelineRes.rows
         });
     } catch (err) {
         console.error(err);
