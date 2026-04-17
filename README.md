@@ -59,7 +59,7 @@ The application follows a minimal and user-focused design approach, prioritizing
 - Immediate feedback through charts and summaries
 - Designed for both desktop and mobile usage
 
-### 🎨 Visual Style
+### Visual Style
 - Soft neutral background (#E5E5E5)
 - Muted accent color (#7086B4)
 - Card-based layout with subtle shadows
