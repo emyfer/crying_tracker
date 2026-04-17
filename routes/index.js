@@ -46,14 +46,22 @@ async function getOrCreateUser(auth0User) {
     return user.rows[0];
 }
 
-router.get("/", async (req, res) => {
-    if (!req.oidc.isAuthenticated()) {
-        return res.redirect("/login");
+router.get("/", (req, res) => {
+    if (req.oidc.isAuthenticated()) {
+        return res.redirect("/landing");
     }
 
+    res.render("index", {
+        user: null
+    });
+});
+
+router.get("/landing", requiresAuth(), async (req, res) => {
     await getOrCreateUser(req.oidc.user);
 
-    res.render("landing");
+    res.render("landing", {
+        user: req.oidc.user
+    });
 });
 
 router.get('/logout', (req, res) => {

@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #E5E5E5;
+    color: #7086B4;
+    margin: 0;
+    padding: 20px;
+}
+
+/* layout */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* hero section */
+.hero {
+    margin-top: 80px;
+    margin-bottom: 60px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #5c6f9c;
+    margin-bottom: 30px;
+}
+
+/* buttons */
+.buttons {
+    margin-top: 20px;
+}
+
+button {
+    padding: 12px 24px;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.primary {
+    background-color: #7086B4;
+    color: white;
+}
+
+.primary:hover {
+    background-color: #5c6f9c;
+    transform: translateY(-2px);
+}
+
+/* features grid */
+.features {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 25px;
+}
+
+@media (max-width: 768px) {
+    .features {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* cards */
+.feature-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(131, 156, 193, 0.5);
+}
+
+.feature-card h3 {
+    margin-top: 0;
+}
