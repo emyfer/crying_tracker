@@ -98,14 +98,5 @@ This project emphasizes:
 
 ---
 
-## Possible Extensions
 
-- Advanced filtering (date ranges, tags)
-- Exporting data (CSV/JSON)
-- More detailed analytics
-- Dashboard improvements
-
----
-
-
-Built as a personal full-stack project.
+Built as a personal full-stack project for me and my friends :D
