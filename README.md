@@ -1,6 +1,6 @@
 # 💧 Crying Tracker
 
-Join in: [Crying Tracker](https://crying_tracker.onrender.com)
+Join in: [Crying Tracker](https://crying-tracker.onrender.com)
 
 Crying Tracker is a lightweight web application designed for logging and analyzing crying events as structured data.
 
@@ -108,7 +108,7 @@ The application is deployed and publicly available online.
 - Database powered by **Neon (PostgreSQL)**
 
 Crying Tracker – Log & Analyze Crying Patterns  
-https://crying_tracker.onrender.com
+https://crying-tracker.onrender.com
 
 ---
 
