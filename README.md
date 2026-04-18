@@ -104,11 +104,11 @@ This project emphasizes:
 
 The application is deployed and publicly available online.
 
-- 🌐 Hosted on **Render**
-- 🗄️ Database powered by **Neon (PostgreSQL)**
+- Hosted on **Render**
+- Database powered by **Neon (PostgreSQL)**
 
 Crying Tracker – Log & Analyze Crying Patterns  
-https://tvoj-app.onrender.com
+https://crying_tracker.onrender.com
 
 ---
 
