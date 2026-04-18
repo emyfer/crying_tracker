@@ -1,5 +1,7 @@
 # 💧 Crying Tracker
 
+[Crying Tracker](https://tvoj-app.onrender.com)
+
 Crying Tracker is a lightweight web application designed for logging and analyzing crying events as structured data.
 
 Instead of traditional journaling, the app focuses on tracking measurable attributes such as frequency, intensity, and reasons, providing a clear overview through simple visualizations.
