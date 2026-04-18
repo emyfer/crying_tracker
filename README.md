@@ -100,5 +100,16 @@ This project emphasizes:
 
 ---
 
+## Deployment & Infrastructure
+
+The application is deployed and publicly available online.
+
+- 🌐 Hosted on **Render**
+- 🗄️ Database powered by **Neon (PostgreSQL)**
+
+Crying Tracker – Log & Analyze Crying Patterns  
+https://tvoj-app.onrender.com
+
+---
 
 Built as a personal full-stack project for me and my friends :D
